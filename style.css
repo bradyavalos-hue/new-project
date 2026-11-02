@@ -1,0 +1,250 @@
+:root {
+  --white: #fbfbfd;
+  --ink: #0b0b0f;
+  --blue: #1c3d8a;
+  --purple: #5b2a8a;
+  --muted: #5c5c68;
+  --line: rgba(11, 11, 15, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: Outfit, system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem 0;
+}
+
+.mark {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--blue);
+}
+
+.nav {
+  display: flex;
+  gap: 2.25rem;
+}
+
+.nav a {
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav a:hover {
+  color: var(--purple);
+}
+
+.hero {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 8.5rem 2.5rem 7rem;
+}
+
+.eyebrow {
+  margin: 0 0 1.75rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4.2rem, 10vw, 7.4rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+
+.lede {
+  max-width: 28rem;
+  margin: 2.75rem 0 0;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 3rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5.5rem 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  padding-top: 0.55rem;
+}
+
+.section-body {
+  max-width: 38rem;
+}
+
+.section h2 {
+  margin: 0 0 1.5rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.section p {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+}
+
+.facts {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
+.facts span {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.projects .intro {
+  margin-bottom: 3.25rem;
+}
+
+.project {
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.project:last-child {
+  padding-bottom: 0;
+}
+
+.project-meta {
+  margin: 0 0 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.project h3 {
+  margin: 0 0 0.75rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.project p:last-child {
+  margin: 0;
+}
+
+.contact .email {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  color: var(--purple);
+  border-bottom: 1px solid currentColor;
+}
+
+.contact .email:hover {
+  color: var(--blue);
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem 4rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  .hero,
+  .section,
+  .site-footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .nav {
+    gap: 1.25rem;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+}
